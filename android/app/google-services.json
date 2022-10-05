@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "126185914031",
+    "project_id": "ahaddadnotes",
+    "storage_bucket": "ahaddadnotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126185914031:android:01caba3917dc28909e1e5a",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126185914031-dd6qj9s206s70jgqpu18igdm0v3121o6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdaQjS6YPvFLC6NXYs5G4Nvgf79m8Lrvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126185914031-dd6qj9s206s70jgqpu18igdm0v3121o6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "126185914031-iil8k8hihbkj9is10u8f9poqhmjvt9g3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
