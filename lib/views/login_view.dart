@@ -10,7 +10,6 @@ class LoginView extends StatefulWidget {
   State<LoginView> createState() => _LoginViewState();
 }
 
-
 class _LoginViewState extends State<LoginView> {
   late final TextEditingController _email;
   late final TextEditingController _password;
@@ -59,19 +58,23 @@ class _LoginViewState extends State<LoginView> {
                       onPressed: () async {
                         final email = _email.text;
                         final password = _password.text;
-
-                        final usercredential = await FirebaseAuth.instance
-                            .createUserWithEmailAndPassword(
-                                email: email, password: password);
-                        print(usercredential);
+                        try {
+                          final usercredential = await FirebaseAuth.instance
+                              .signInWithEmailAndPassword(
+                                  email: email, password: password);
+                          print(usercredential);
+                        } catch (e) {
+                          print(e);
+                        }
                       },
                       child: Text('Login'),
                     ),
                   ],
                 );
-                default:
-                  return const Text('Loading');
-            };
+              default:
+                return const Text('Loading');
+            }
+            ;
           },
         ));
     ;

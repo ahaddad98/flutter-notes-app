@@ -11,7 +11,7 @@ class Registre extends StatefulWidget {
 }
 
 class _RegistreState extends State<Registre> {
- late final TextEditingController _email;
+  late final TextEditingController _email;
   late final TextEditingController _password;
   @override
   void initState() {
@@ -58,19 +58,23 @@ class _RegistreState extends State<Registre> {
                       onPressed: () async {
                         final email = _email.text;
                         final password = _password.text;
-
-                        final usercredential = await FirebaseAuth.instance
-                            .createUserWithEmailAndPassword(
-                                email: email, password: password);
-                        print(usercredential);
+                        try{
+                          final usercredential = await FirebaseAuth.instance
+                              .createUserWithEmailAndPassword(
+                                  email: email, password: password);
+                          print(usercredential);
+                        } catch(e){
+                          print(e);
+                        }
                       },
                       child: Text('Register'),
                     ),
                   ],
                 );
-                default:
-                  return const Text('Loading');
-            };
+              default:
+                return const Text('Loading');
+            }
+            ;
           },
         ));
     ;
